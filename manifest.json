@@ -1,0 +1,106 @@
+{
+  "$schema": "https://statics.teams.microsoft.com/sdk/v1.2/manifest/MicrosoftTeams.schema.json", 
+  "manifestVersion": "1.2",
+  "version": "1.0.0",
+  "id": "09a9f991-27d8-4873-aa9d-45fffc0af8a8",
+  "packageName": "com.bot.boba",
+  "developer": {
+    "name": "MACH",
+    "websiteUrl": "https://github.com/cyndichin/BobaBot",
+    "privacyUrl": "https://github.com/cyndichin/BobaBot",
+    "termsOfUseUrl": "https://github.com/cyndichin/BobaBot"
+  },
+  "name": {
+    "short": "BobaBot",
+    "full": "BobaBot Corporate Taxonomy Digital Assistant"
+  },
+  "description": {
+    "short": "Provides metadata descriptions for internal acronyms.",
+    "full": "Provides metadata descriptions for internal acronyms."
+  },
+  "icons": {
+    "outline": "outline.png", 
+    "color": "color.png" 
+  },
+  "accentColor": "#f9996b",
+"configurableTabs": [
+    {
+      "configurationUrl": "https://taburl.com/config.html",
+      "canUpdateConfiguration": true,
+      "scopes": [ "team" ]
+    }
+  ],
+  "staticTabs": [
+    {
+      "entityId": "idForPage",
+      "name": "Display name of tab",
+      "contentUrl": "https://teams-specific-webview.website.com",
+      "websiteUrl": "http://fullwebsite.website.com",
+      "scopes": [ "personal" ]
+    }
+  ],
+  "bots": [
+    {
+      "botId": "09a9f991-27d8-4873-aa9d-45fffc0af8a8",
+      "needsChannelSelector": false,
+      "isNotificationOnly": false,
+      "scopes": [ "team", "personal" ],
+      "commandLists": [
+        {
+          "scopes": ["team"],
+          "commands": [
+            {
+              "title": "Command 1",
+              "description": "Description of Command 1"
+            },
+            {
+              "title": "Command N",
+              "description": "Description of Command N"
+            }
+          ]
+        },
+        {
+          "scopes": ["personal"],
+          "commands": [
+            {
+              "title": "Personal command 1",
+              "description": "Description of Personal command 1"
+            },
+            {
+              "title": "Personal command N",
+              "description": "Description of Personal command N"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "composeExtensions": [
+    {
+      "botId": "09a9f991-27d8-4873-aa9d-45fffc0af8a8",
+      "canUpdateConfiguration": true,
+      "commands": [
+        {
+          "id": "exampleCmd",
+          "title": "Example Command",
+          "parameters": [
+            {
+              "name": "keyword",
+              "title": "Search keywords",
+              "description": "Enter the keywords to search for"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "permissions": [
+    "identity",
+    "messageTeamMembers"
+  ],
+  "validDomains": [
+     "*.taburl.com",
+     "*.otherdomains.com"
+  ]
+
+}
